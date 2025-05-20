@@ -1,59 +1,102 @@
-# PixelPet
+# Pixel Pet - Interactive Cat Animation
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+A delightful Angular application featuring an interactive animated cat using PixiJS and NgXs state management.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Smooth sprite-based cat animations
+- Multiple animation states:
+  - Running (138x100 pixels, 8 frames)
+  - Scratching (97x100 pixels, 6 frames)
+  - Sleeping (150x100 pixels, 2 frames)
+  - Idle/Stop state
+- Automatic random animation transitions
+- Manual animation controls
+- Responsive design that adapts to window size
 
-```bash
-ng serve
-```
+## Prerequisites
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+- Angular CLI (v19.2.0 or higher)
 
-## Code scaffolding
+## Installation
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+1. Clone the repository:
 
 ```bash
-ng build
+git clone [your-repository-url]
+cd pixel-pet
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+2. Install dependencies:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+3. Start the development server:
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+4. Open your browser and navigate to `http://localhost:4200`
 
-## Additional Resources
+## Project Structure
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```
+src/
+├── app/
+│   ├── components/
+│   │   └── cat-animation/      # Cat animation component
+│   ├── store/
+│   │   └── cat-animation/      # NgXs state management
+│   └── assets/
+│       └── cat/               # Sprite assets
+│           ├── running/       # Running animation frames
+│           ├── scratching/    # Scratching animation frames
+│           └── sleeping/      # Sleeping animation frames
+```
+
+## Animation Details
+
+- Running Animation:
+
+  - 8 frames at 138x100 pixels
+  - Animation speed: 0.2
+  - Random duration: 5-20 seconds
+
+- Scratching Animation:
+
+  - 6 frames at 97x100 pixels
+  - Animation speed: 0.15
+  - Random duration: 5-20 seconds
+
+- Sleeping Animation:
+  - 2 frames at 150x100 pixels
+  - Animation speed: 0.1
+  - Random duration: 1-5 minutes
+
+## State Management
+
+The application uses NgXs for state management with the following actions:
+
+- PlayRunningAnimation
+- PlayScratchingAnimation
+- PlayStopAnimation
+- PlaySleepingAnimation
+- StartRandomAnimation
+- StopAutoPlay
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
