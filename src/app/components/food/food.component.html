@@ -1,0 +1,8 @@
+<div
+  class="food"
+  [class.disabled]="!canFeed()"
+  draggable="true"
+  (dragstart)="onDragStart($event)"
+>
+  🍗
+</div>

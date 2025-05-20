@@ -1,0 +1,32 @@
+.food {
+  font-size: 32px;
+  user-select: none;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+
+  &.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(255, 0, 0, 0.1);
+  }
+
+  &:not(.disabled) {
+    cursor: grab;
+
+    &:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    &:active {
+      transform: scale(0.9);
+      cursor: grabbing;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
