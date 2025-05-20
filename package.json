@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && cp src/404.html dist/pixel-pet/browser/404.html",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "process-sprites": "node scripts/process-sprites.js",
