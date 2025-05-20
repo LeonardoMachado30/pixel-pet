@@ -1,0 +1,14 @@
+<div
+  class="container"
+  [class.can-drop]="characterService.canFeed()"
+  (dragover)="onDragOver($event)"
+  (drop)="onDrop($event)"
+>
+  <div #container></div>
+  <app-life></app-life>
+  <app-food></app-food>
+
+  <div class="controls" *ngIf="showControls">
+    <ng-content></ng-content>
+  </div>
+</div>
