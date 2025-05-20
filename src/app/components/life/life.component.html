@@ -1,0 +1,10 @@
+<div class="life-container">
+  <div
+    *ngFor="let heart of hearts()"
+    class="heart"
+    [class.filled]="heart.filled"
+    [class.green]="heart.color === 'green'"
+    [class.yellow]="heart.color === 'yellow'"
+    [class.red]="heart.color === 'red'"
+  ></div>
+</div>

@@ -1,0 +1,51 @@
+.life-container {
+  position: fixed;
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  top: 2%;
+  right: 2%;
+  z-index: 1000;
+}
+
+.heart {
+  width: 24px;
+  height: 24px;
+  background: #333;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+
+  &.filled {
+    &.green {
+      background: #44ff44;
+      box-shadow: 0 0 10px rgba(68, 255, 68, 0.5);
+    }
+
+    &.yellow {
+      background: #ffff44;
+      box-shadow: 0 0 10px rgba(255, 255, 68, 0.5);
+    }
+
+    &.red {
+      background: #ff4444;
+      box-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+    }
+
+    animation: pulse 1s ease-in-out;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
