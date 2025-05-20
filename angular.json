@@ -36,9 +36,7 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": [],
-            "prerender": true,
-            "ssr": false
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -99,7 +97,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/pixel-pet/"
+            "baseHref": "/pixel-pet/",
+            "noSilent": true
           }
         }
       }
