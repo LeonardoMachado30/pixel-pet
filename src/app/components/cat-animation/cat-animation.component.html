@@ -1,0 +1,13 @@
+<app-base-animation [config]="catConfig" (spriteClick)="onSpriteClick($event)">
+  <button button="cat-action" (click)="takeDamage()">💥 Causar Dano</button>
+  <button button="cat-action" (click)="playRunning()">Run</button>
+  <button button="cat-action" (click)="playScratch()">Scratch</button>
+  <button button="cat-action" (click)="playWallScratch()">Wall Scratch</button>
+  <button button="cat-action" (click)="playStop()">Stop</button>
+  <button button="cat-action" (click)="playSleep()">Sleep</button>
+  <button button="cat-action" (click)="playAlert()">Alert</button>
+  <button button="cat-action" (click)="heal()">Heal</button>
+  <button button="cat-action" (click)="toggleAutoPlay()">
+    {{ isAutoPlaying() ? "Stop Auto" : "Start Auto" }}
+  </button>
+</app-base-animation>

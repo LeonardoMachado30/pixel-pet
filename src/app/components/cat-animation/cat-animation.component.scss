@@ -1,0 +1,13 @@
+button[button="cat-action"] {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #4a4a4a;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #666;
+  }
+}
